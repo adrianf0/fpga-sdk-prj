@@ -998,4 +998,7 @@ current_run -implementation [get_runs impl_1]
 open_bd_design [file normalize "$origin_dir/bd/sys_pll/sys_pll.bd"]
 open_bd_design [file normalize "$origin_dir/bd/system/system.bd"]
 
+#Disable pin assignment
+set_property is_enabled false [get_files  $origin_dir/constrs/zynq_scr1_physical.xdc]
+
 puts "INFO: Project created:zynq_scr1"
